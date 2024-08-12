@@ -1,0 +1,57 @@
+  /* Add necessary CSS for the weather widget */
+  .header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+.header__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__logo {
+    font-size: 24px;
+}
+.header__nav {
+    display: flex;
+}
+.header__nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.header__nav-item {
+    margin-right: 15px;
+}
+.header__nav-link {
+    color: white;
+    text-decoration: none;
+}
+.header__nav-link.highlight {
+    font-weight: bold;
+}
+.header__mobile-menu {
+    display: none;
+}
+.weather-widget {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    font-size: 14px;
+}
+@media (max-width: 768px) {
+    .header__box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .header__nav {
+        margin-top: 10px;
+    }
+    .header__mobile-menu {
+        display: block;
+    }
+}

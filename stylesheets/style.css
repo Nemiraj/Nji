@@ -1,0 +1,75 @@
+/* Slider Container */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align content to the top */
+    padding-top: 20px; /* Adjust padding to move images down if necessary */
+  }
+  
+  /* Slider Wrapper */
+  .slider__wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /* Individual Slide */
+  .slider__item {
+    min-width: 100%; /* One image per view */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align images to the top */
+  }
+  
+  .slider__item img {
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure image does not exceed the container width */
+    max-height: 100%; /* Ensure image does not exceed the container height */
+    object-fit: contain; /* Ensure the entire image is visible */
+  }
+  
+  /* Slider Navigation */
+  .slider__nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 20px;
+  }
+  
+  .slider__nav-prev, .slider__nav-next {
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+  }
+  
+  /* Optional: Slider Pagination */
+  .slider__pagination {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .pagination__item {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .pagination__item.active {
+    background-color: #333;
+  }
+  
